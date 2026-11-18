@@ -3,9 +3,9 @@ const placar =
 pontuacao:0,
 largura:800,
 altura:60,
-corFundo:"purple",
+corFundo:"Black",
 corTexto:"#39FF14",
-nomeJogo:"THE LIFE SNAKE",
+nomeJogo:"SNAKE98",
 desenhar()
     {
         canvasCtx.fillStyle=this.corFundo;

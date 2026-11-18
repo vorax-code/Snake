@@ -5,17 +5,20 @@ function jogar(){
     maca.desenhar();
     cobra.mover();
     if (maca.teveColisao(cobra)){
+        trilha.tocar('cobraComeu');
         placar.pontuacao+=10;
         maca = new Maca();
     }
     if (cobra.vida > 0)
         requestAnimationFrame(jogar);
     else{
+        trilha.tocar('fimJogo');
         placar.nomeJogo="Fim de Jogo"
         placar.desenhar();
     }
 }
 let maca = new Maca();
+let trilha = new TrilhaSonora();
 jogar();
 
 document.addEventListener("keydown", (evento)=> {
